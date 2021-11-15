@@ -1,3 +1,10 @@
+/*
+** EPITECH PROJECT, 2021
+** Sebas-i-victor-printf
+** File description:
+** bsprintf.h
+*/
+
 #ifndef BSPRINTF_H_
 #define BSPRINTF_H_
 
@@ -13,7 +20,7 @@ void my_putchar(char c);
 int my_putstr(char *str);
 char *my_revstr (char *str);
 int sum_numbers(int n, ...);
-int sum_strings_length(int n, ...); 
+int sum_strings_length(int n, ...);
 void my_printf(char *s, ...);
 void print_type_e (long unidades, double value, int elevatmenys, int i);
 void print_type_e (long unidades, double value, int elevatmenys, int i);
@@ -32,7 +39,7 @@ void function_o(va_list list);
 void function_e(va_list list);
 void function_p(va_list list);
 void function_S(va_list list);
-
+void function_B(va_list list);
 
 
 

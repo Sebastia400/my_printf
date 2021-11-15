@@ -17,7 +17,7 @@ void my_printf(char *s, ...)
         if (s[i] == '%') {
             while (!isalpha(s[i])) {
                 i++;
-            } 
+            }
             do_op(list, s[i]);
         } else
             my_putchar(s[i]);

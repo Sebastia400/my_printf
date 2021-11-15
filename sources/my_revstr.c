@@ -1,21 +1,28 @@
-
 /*
 ** EPITECH PROJECT, 2021
-** my_revstr.c
+** my revstr
 ** File description:
-** Write a function that reverses a string.
+** function that reverses a string
 */
 
-#include "../../include/my.h"
+int my_strlen2(char const *str)
+{
+    int i = 0;
+
+    while (str[i] != '\0') {
+        i++;
+    }
+    i--;
+    return (i);
+}
 
 char *my_revstr(char *str)
 {
     int i = 0;
-    int n = my_strlen(str);
+    int n = my_strlen2(str);
     char temp[n];
 
-    n--;
-    while (str[i] != '\0'){
+    while (str[i] != '\0') {
         temp[n] = str[i];
         i++;
         n--;

@@ -12,13 +12,15 @@ SRC		=	 sources/
 
 SRC_C	=	my_printf.c			\
 			do_op.c				\
-			functions_E_to_x.c	\
+			functions_e_to_x.c	\
 			functions_s_to_e.c	\
-			functions_X_to_o.c	\
+			functions_x_to_o.c	\
+			functions_4.c		\
 			main.c				\
 			my_put_nbr.c		\
 			my_putstr.c			\
-			my_putchar.c
+			my_putchar.c		\
+			my_revstr.c
 
 SRCS_C	= 	$(addprefix $(SRC), $(SRC_C))
 
@@ -29,8 +31,7 @@ NAME = print
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	make -C lib/my/
-	gcc $(CFLAGS) -o $(NAME) $(OBJ) $(LIB)
+	gcc -W -Werror -Wextra -Wall $(CFLAGS) -o $(NAME) $(OBJ)
 
 clean:
 	rm -f $(OBJ)

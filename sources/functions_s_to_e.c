@@ -25,20 +25,20 @@ void function_i_d(va_list list)
 
 void print_type_e (long unidades, double value, int elevatmenys, int i)
 {
-        int n = 0;
+    int n = 0;
 
-        value -= unidades;
-        my_put_nbr(unidades);
-        my_putchar('.');
-        while (n != 6) {
-            value *= 10;
-            my_put_nbr((int)value % 10);
-            n++;
-        }
-        my_putchar('e');
-        if (elevatmenys)
-            my_putchar('-');     
-        my_put_nbr(i);
+    value -= unidades;
+    my_put_nbr(unidades);
+    my_putchar('.');
+    while (n != 6) {
+        value *= 10;
+        my_put_nbr((int)value % 10);
+        n++;
+    }
+    my_putchar('e');
+    if (elevatmenys)
+        my_putchar('-');
+    my_put_nbr(i);
 }
 
 void function_e(va_list list)
