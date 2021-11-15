@@ -20,11 +20,9 @@ void print_type_E (long unidades, double value, int elevatmenys, int i)
             my_put_nbr((int)value % 10);
             n++;
         }
-        my_putchar('E');
+        my_putchar('e');
         if (elevatmenys)
             my_putchar('-');
-        else 
-            my_putchar('+');
         if (i <= 9)
             my_putchar('0');
 
@@ -47,7 +45,7 @@ void function_E(va_list list)
     long unidades = 0;
     long decimales = 0;
     int elevatmenys = 0;
-    printf("r: %ld\n", value);
+
     value = check_neg(value);
     unidades = value;
     if (unidades < 1) {
