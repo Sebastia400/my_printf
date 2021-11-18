@@ -13,23 +13,27 @@
 void fill_operations2(calculator *operations)
 {
     operations[8].op = 'G';
-    operations[8].ptr = &function_G;
+    operations[8].ptr = &function_cg;
     operations[9].op = 'x';
     operations[9].ptr = &function_x;
     operations[10].op = 'X';
-    operations[10].ptr = &function_X;
+    operations[10].ptr = &function_cx;
     operations[11].op = 'p';
     operations[11].ptr = &function_p;
-    operations[12].op = 'G';
-    operations[12].ptr = &function_G;
-    operations[13].op = 'u';
-    operations[13].ptr = &function_u;
-    operations[14].op = 'o';
-    operations[14].ptr = &function_o;
-    operations[15].op = 'S';
-    operations[15].ptr = &function_S;
-    operations[16].op = 'B';
-    operations[16].ptr = &function_B;
+    operations[12].op = 'u';
+    operations[12].ptr = &function_u;
+    operations[13].op = 'o';
+    operations[13].ptr = &function_o;
+    operations[14].op = 'S';
+    operations[14].ptr = &function_cs;
+    operations[15].op = 'B';
+    operations[15].ptr = &function_cb;
+    operations[16].op = '%';
+    operations[16].ptr = &function_module;
+    operations[15].op = ' ';
+    operations[15].ptr = &function_space;
+    operations[16].op = '+';
+    operations[16].ptr = &function_+;
 }
 
 void fill_operations(calculator *operations)
@@ -45,7 +49,7 @@ void fill_operations(calculator *operations)
     operations[4].op = 'e';
     operations[4].ptr = &function_e;
     operations[5].op = 'E';
-    operations[5].ptr = &function_E;
+    operations[5].ptr = &function_ce;
     operations[6].op = 'f';
     operations[6].ptr = &function_f;
     operations[7].op = 'g';

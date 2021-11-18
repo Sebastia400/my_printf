@@ -7,6 +7,20 @@
 
 #include "./../includes/bsprintf.h"
 
+int inbase(char character)
+{
+    char base[] = "GxXpuoSB%scdieEfg +-#";
+    int i = 0;
+
+    while(base[i] != '\0') {
+        if(character == base[i])
+            return (1);
+        i++;
+    }
+    return (0);
+}
+
+
 void my_printf(char *s, ...)
 {
     int i = 0;
@@ -15,7 +29,8 @@ void my_printf(char *s, ...)
     va_start(list, s);
     while (s[i] != '\0') {
         if (s[i] == '%') {
-            while (!isalpha(s[i])) {
+            i++;
+            while (s[i] != '\0' && !inbase(s[i]) && s[i] != '%') {
                 i++;
             }
             do_op(list, s[i]);

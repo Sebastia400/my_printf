@@ -15,6 +15,5 @@ int my_putstr(char *str)
         my_putchar(str[n]);
         n++;
     }
-    my_putchar('\0');
     return (0);
 }

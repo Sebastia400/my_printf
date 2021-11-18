@@ -23,25 +23,23 @@ int sum_numbers(int n, ...);
 int sum_strings_length(int n, ...);
 void my_printf(char *s, ...);
 void print_type_e (long unidades, double value, int elevatmenys, int i);
-void print_type_e (long unidades, double value, int elevatmenys, int i);
+void print_type_ce (long unidades, double value, int elevatmenys, int i);
 int do_op(va_list list, char type);
-void function_E(va_list value);
+void function_ce(va_list value);
 void function_f(va_list list);
 void function_g(va_list list);
-void function_G(va_list list);
+void function_cg(va_list list);
 void function_x(va_list list);
 void function_s(va_list list);
 void function_c(va_list list);
 void function_i_d(va_list list);
-void function_X(va_list list);
+void function_cx(va_list list);
 void function_u(va_list list);
 void function_o(va_list list);
 void function_e(va_list list);
 void function_p(va_list list);
-void function_S(va_list list);
-void function_B(va_list list);
-
-
-
+void function_cs(va_list list);
+void function_cb(va_list list);
+void function_module(va_list list);
 
 #endif
