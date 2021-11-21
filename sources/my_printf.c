@@ -12,8 +12,8 @@ int inbase(char character)
     char base[] = "GxXpuoSB%scdieEfg +-#";
     int i = 0;
 
-    while(base[i] != '\0') {
-        if(character == base[i])
+    while (base[i] != '\0') {
+        if (character == base[i])
             return (1);
         i++;
     }

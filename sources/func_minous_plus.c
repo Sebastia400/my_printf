@@ -9,17 +9,17 @@
 
 void func_space(va_list list)
 {
-    
+
     my_putchar(' ');
 }
 
-void func_minous(va_list copy) 
+void func_minous(va_list copy)
 {
     double var = (double)va_arg(copy, double);
     printf("1var:%lf\n", var);
 
     if (var > 0)
-        my_putchar('-');   
+        my_putchar('-');
 }
 
 void func_plus(va_list copy)

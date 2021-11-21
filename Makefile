@@ -2,7 +2,8 @@
 ## EPITECH PROJECT, 2021
 ## d10
 ## File description:
-## 
+## description
+##
 
 OBJ = $(SRCS_C:.c=.o)
 
