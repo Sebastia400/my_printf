@@ -5,7 +5,7 @@
 ** disp_stdarg.c
 */
 
-#include "./../includes/bsprintf.h"
+#include "./../includes/my_printflib.h"
 
 int inbase(char character)
 {
@@ -20,23 +20,29 @@ int inbase(char character)
     return (0);
 }
 
-
 void my_printf(char *s, ...)
 {
     int i = 0;
 
     va_list list;
+    va_list copy;
     va_start(list, s);
+    va_start(copy, s);
+
     while (s[i] != '\0') {
         if (s[i] == '%') {
             i++;
-            while (s[i] != '\0' && !inbase(s[i]) && s[i] != '%') {
+            while (s[i] != '\0' && !isalpha(s[i]) && s[i] != '%') {
+                if (inbase(s[i])) {
+                    func_pointer(copy, s[i]);
+                }
                 i++;
             }
-            do_op(list, s[i]);
+            func_pointer(list, s[i]);
         } else
             my_putchar(s[i]);
         i++;
     }
     va_end(list);
+    va_end(copy);
 }

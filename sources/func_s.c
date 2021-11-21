@@ -7,7 +7,7 @@
 
 #include "./../includes/my_printflib.h"
 
-void my_putchar(char c)
+void func_s(va_list list)
 {
-    write(1, &c, 1);
+    my_putstr((char *)va_arg(list, char *));
 }

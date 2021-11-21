@@ -5,7 +5,7 @@
 ** function that can display int values
 */
 
-#include "./../includes/bsprintf.h"
+#include "./../includes/my_printflib.h"
 
 long my_put_nbr(long nb)
 {
