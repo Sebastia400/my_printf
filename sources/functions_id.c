@@ -5,9 +5,9 @@
 ** function_4.c
 */
 
-#include "./../includes/my_printflib.h"
+#include "./../includes/bsprintf.h"
 
-void func_i_d(va_list list)
+void function_i_d(va_list list)
 {
     my_put_nbr((int)va_arg(list, int));
 }

@@ -5,7 +5,7 @@
 ** a function that displays, one-by-one, the characters of a string
 */
 
-#include "./../includes/my_printflib.h"
+#include "./../includes/bsprintf.h"
 
 int my_putstr(char *str)
 {

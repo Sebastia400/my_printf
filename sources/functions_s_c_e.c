@@ -4,8 +4,19 @@
 ** File description:
 ** my putchar
 */
+#include <stdarg.h>
 
-#include "./../includes/my_printflib.h"
+#include "./../includes/bsprintf.h"
+
+void function_s(va_list list)
+{
+    my_putstr((char *)va_arg(list, char *));
+}
+
+void function_c(va_list list)
+{
+    my_putchar((int)va_arg(list, int));
+}
 
 void print_type_e (long units, double value, int elevatmenys, int i)
 {
@@ -40,13 +51,14 @@ double extra_e(double value)
     return (value);
 }
 
-void func_e(va_list list)
+void function_e(va_list list)
 {
     int i = 0;
-    double value = extra_e(va_arg(list, double));
-    long unidades = (long)extra_e(value);
+    double value = va_arg(list, double);
+    long unidades = 0;
     int elevatmenys = 0;
 
+    unidades = (long)extra_e(value);
     if (unidades < 1) {
         while (unidades <= 0) {
             value *= 10;

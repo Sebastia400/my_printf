@@ -5,9 +5,9 @@
 ** my putchar
 */
 
-#include "./../includes/my_printflib.h"
+#include "./../includes/bsprintf.h"
 
-void print_type_ce (long units, double value, int elevatmenys, int i)
+void print_type_ce(long units, double value, int elevatmenys, int i)
 {
     int n = 0;
     int result = 0;
@@ -40,13 +40,14 @@ double extra_ce(double value)
     return (value);
 }
 
-void func_ce(va_list list)
+void function_ce(va_list list)
 {
     int i = 0;
-    double value = extra_ce(va_arg(list, double));
-    long unidades = value;
+    double value = va_arg(list, double);
+    long unidades = 0;
     int elevatmenys = 0;
 
+    unidades = (long)extra_ce(value);
     if (unidades < 1) {
         while (unidades <= 0) {
             value *= 10;
@@ -62,4 +63,32 @@ void func_ce(va_list list)
         }
     }
     print_type_ce(unidades, value, elevatmenys, i);
+}
+
+void print_type_f (long units, float value, int i)
+{
+    int n = 0;
+
+    value -= units;
+    my_put_nbr(units);
+    my_putchar('.');
+    while (n != 6) {
+        value *= 10;
+        my_put_nbr((int)value % 10);
+        n++;
+    }
+}
+
+void function_f(va_list list)
+{
+    double value = va_arg(list, double);
+    int i = 0;
+    long units = 0;
+
+    if (value < 0) {
+        my_putchar('-');
+        value *= -1;
+    }
+    units = value;
+    print_type_f(units, value, i);
 }

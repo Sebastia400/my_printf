@@ -8,7 +8,10 @@
 #ifndef STRUCT_H_
 #define STRUCT_H_
 
-#include "./my_printflib.h"
+#include <unistd.h>
+
+void none();
+void printelements(int num, int x, int y);
 
 typedef struct do_op
 {
